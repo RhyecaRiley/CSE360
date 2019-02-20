@@ -7,13 +7,15 @@
  */
 public class Calculator 
 {
-	private int total;			
+	private int total;	
+	private String history; 	//used for getHistory
 	/**
 	 * constructor method
 	 */
 	public Calculator () 
 	{
 		total = 0; // not needed - included for clarity
+		history = new String("0"); //start at an initial value 0
 	}
 	/**
 	 * Return the current total from all the functions
@@ -30,6 +32,7 @@ public class Calculator
 	public void add (int value) 
 	{
 		total = total + value;
+		history = history + (" + " + value);
 	}
 	/**
 	 * subtract the parameter value from the total variable
@@ -38,6 +41,7 @@ public class Calculator
 	public void subtract (int value) 
 	{
 		total = total - value;
+		history = history + (" - " + value);
 	}
 	/**
 	 * Multiply the total by the parameter 
@@ -46,6 +50,7 @@ public class Calculator
 	public void multiply (int value) 
 	{
 		total = total * value;
+		history = history + (" * " + value);
 	}
 	/**
 	 * divide the total by the parameter
@@ -62,6 +67,7 @@ public class Calculator
 		{
 			total = total / value;
 		}
+		history = history + (" / " + value);
 	}
 	/**
 	 * Return a history of all actions performed (add, subtract, divide, multiply)
@@ -69,6 +75,6 @@ public class Calculator
 	 */
 	public String getHistory () 
 	{
-		return "";
+		return history;
 	}
 }
