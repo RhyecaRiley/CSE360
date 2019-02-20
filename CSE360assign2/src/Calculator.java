@@ -2,7 +2,7 @@
  * 
  * Assignment number 2 is meant for us to practice using github
  * by committing and pushing code to github
- * @author rjriley3 Class ID: 534
+ * @author RhyecaRiley Class ID: 534
  *
  */
 public class Calculator 
